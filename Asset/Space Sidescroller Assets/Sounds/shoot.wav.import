@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c7yx73bvttgsw"
+path="res://.godot/imported/shoot.wav-d580af4653f8e0cdc13f0a2d9d49bebe.sample"
+
+[deps]
+
+source_file="res://Asset/Space Sidescroller Assets/Sounds/shoot.wav"
+dest_files=["res://.godot/imported/shoot.wav-d580af4653f8e0cdc13f0a2d9d49bebe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
