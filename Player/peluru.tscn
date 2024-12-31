@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://x0ircq2g1vbf"]
+
+[ext_resource type="Texture2D" uid="uid://cg56exrfhsdan" path="res://Asset/Space Sidescroller Assets/Bullet.png" id="1_c7mxu"]
+[ext_resource type="Script" path="res://Player/peluru.gd" id="2_autvj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40cry"]
+size = Vector2(10, 4)
+
+[node name="Peluru" type="Sprite2D"]
+texture = ExtResource("1_c7mxu")
+script = ExtResource("2_autvj")
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_40cry")
