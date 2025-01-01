@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcc46byhm3f0e"]
+[gd_scene load_steps=6 format=3 uid="uid://dcc46byhm3f0e"]
 
 [ext_resource type="PackedScene" uid="uid://bbhuoa8khoab5" path="res://Player/player.tscn" id="1_d7816"]
 [ext_resource type="Script" path="res://Main/main.gd" id="1_mt6bg"]
 [ext_resource type="PackedScene" uid="uid://bnfib3tsvoeth" path="res://Musuh/musuh_spawner.tscn" id="3_bhqmv"]
+[ext_resource type="Texture2D" uid="uid://ceex7sklbcpjw" path="res://UI/player_health.png" id="4_dlv6h"]
+[ext_resource type="Script" path="res://UI/ui_darah.gd" id="5_b3inx"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mt6bg")
@@ -12,6 +14,15 @@ position = Vector2(11, 44)
 
 [node name="Musuh_spawner" parent="." instance=ExtResource("3_bhqmv")]
 position = Vector2(179, 0)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UI_darah" type="Sprite2D" parent="UI"]
+position = Vector2(17, 8)
+texture = ExtResource("4_dlv6h")
+hframes = 4
+frame = 3
+script = ExtResource("5_b3inx")
 
 [connection signal="instance_node" from="Player" to="." method="instance_node"]
 [connection signal="instance_node" from="Musuh_spawner" to="." method="instance_node"]

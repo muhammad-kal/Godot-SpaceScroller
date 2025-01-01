@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceex7sklbcpjw"
-path="res://.godot/imported/player_health.png-b292b8265f0d94f48b37efb40066e7e6.ctex"
+path="res://.godot/imported/player_health.png-676a05e3810582e0307eedf2304bed09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Space Sidescroller Assets/player_health.png"
-dest_files=["res://.godot/imported/player_health.png-b292b8265f0d94f48b37efb40066e7e6.ctex"]
+source_file="res://UI/player_health.png"
+dest_files=["res://.godot/imported/player_health.png-676a05e3810582e0307eedf2304bed09.ctex"]
 
 [params]
 
