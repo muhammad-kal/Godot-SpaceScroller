@@ -13,6 +13,7 @@ signal instance_node(objek, posisi)
 
 func _ready() -> void:
 	Global.player = self
+	Global.skor = 0
 	global_position.y = get_viewport().get_mouse_position().y
 	
 func _exit_tree() -> void:

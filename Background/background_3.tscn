@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://psg8axfnsooc"]
+
+[ext_resource type="PackedScene" uid="uid://c1yvdkhvv60h7" path="res://Background/background_1.tscn" id="1_k5dnq"]
+[ext_resource type="Texture2D" uid="uid://bhoi7m0icqj0w" path="res://Background/Star_background_3.png" id="2_1lnl7"]
+
+[node name="Background3" instance=ExtResource("1_k5dnq")]
+kecepatan = 15
+
+[node name="Sprite2D" parent="ParallaxLayer" index="0"]
+texture = ExtResource("2_1lnl7")

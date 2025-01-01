@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dcc46byhm3f0e"]
+[gd_scene load_steps=15 format=3 uid="uid://dcc46byhm3f0e"]
 
 [ext_resource type="PackedScene" uid="uid://bbhuoa8khoab5" path="res://Player/player.tscn" id="1_d7816"]
 [ext_resource type="Script" path="res://Main/main.gd" id="1_mt6bg"]
@@ -10,7 +10,10 @@
 [ext_resource type="Script" path="res://Main/Skor.gd" id="7_axwwl"]
 [ext_resource type="AudioStream" uid="uid://c7yx73bvttgsw" path="res://SFX/shoot.wav" id="7_t48ha"]
 [ext_resource type="AudioStream" uid="uid://ccaglk4kl2fhd" path="res://SFX/explosion.wav" id="8_iglf7"]
+[ext_resource type="PackedScene" uid="uid://c1yvdkhvv60h7" path="res://Background/background_1.tscn" id="8_wtt10"]
+[ext_resource type="PackedScene" uid="uid://dk61d5bsdl0jx" path="res://Background/background_2.tscn" id="9_w5bjs"]
 [ext_resource type="AudioStream" uid="uid://8ohyq1sfa4eg" path="res://SFX/hit.wav" id="9_y6o26"]
+[ext_resource type="PackedScene" uid="uid://psg8axfnsooc" path="res://Background/background_3.tscn" id="10_5cf4a"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mt6bg")
@@ -43,6 +46,12 @@ scale = Vector2(0.64, 0.64)
 theme_override_fonts/font = ExtResource("6_cqx2c")
 text = "Skor : 0"
 script = ExtResource("7_axwwl")
+
+[node name="Background1" parent="UI" instance=ExtResource("8_wtt10")]
+
+[node name="Background2" parent="UI" instance=ExtResource("9_w5bjs")]
+
+[node name="Background3" parent="UI" instance=ExtResource("10_5cf4a")]
 
 [node name="Sound_manager" type="Node" parent="."]
 script = ExtResource("6_oblsu")
