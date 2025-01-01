@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("damage_ke_musuh"):
+		Global.play_suara("Meledak")
 		emit_signal("instance_node", objPartikelMati, global_position)
 		area.get_parent().queue_free()
 		queue_free()

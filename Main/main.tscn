@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcc46byhm3f0e"]
+[gd_scene load_steps=10 format=3 uid="uid://dcc46byhm3f0e"]
 
 [ext_resource type="PackedScene" uid="uid://bbhuoa8khoab5" path="res://Player/player.tscn" id="1_d7816"]
 [ext_resource type="Script" path="res://Main/main.gd" id="1_mt6bg"]
 [ext_resource type="PackedScene" uid="uid://bnfib3tsvoeth" path="res://Musuh/musuh_spawner.tscn" id="3_bhqmv"]
 [ext_resource type="Texture2D" uid="uid://ceex7sklbcpjw" path="res://UI/player_health.png" id="4_dlv6h"]
 [ext_resource type="Script" path="res://UI/ui_darah.gd" id="5_b3inx"]
+[ext_resource type="Script" path="res://SFX/sound_manager.gd" id="6_oblsu"]
+[ext_resource type="AudioStream" uid="uid://c7yx73bvttgsw" path="res://SFX/shoot.wav" id="7_t48ha"]
+[ext_resource type="AudioStream" uid="uid://ccaglk4kl2fhd" path="res://SFX/explosion.wav" id="8_iglf7"]
+[ext_resource type="AudioStream" uid="uid://8ohyq1sfa4eg" path="res://SFX/hit.wav" id="9_y6o26"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mt6bg")
@@ -23,6 +27,18 @@ texture = ExtResource("4_dlv6h")
 hframes = 4
 frame = 3
 script = ExtResource("5_b3inx")
+
+[node name="Sound_manager" type="Node" parent="."]
+script = ExtResource("6_oblsu")
+
+[node name="Tembak" type="AudioStreamPlayer" parent="Sound_manager"]
+stream = ExtResource("7_t48ha")
+
+[node name="Meledak" type="AudioStreamPlayer" parent="Sound_manager"]
+stream = ExtResource("8_iglf7")
+
+[node name="Tertabrak" type="AudioStreamPlayer" parent="Sound_manager"]
+stream = ExtResource("9_y6o26")
 
 [connection signal="instance_node" from="Player" to="." method="instance_node"]
 [connection signal="instance_node" from="Musuh_spawner" to="." method="instance_node"]

@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 func Mati():
 	if darah < 0 :
 		emit_signal("instance_node", playerPartikelMati, global_position)
+		Global.play_suara("Meledak")
 		queue_free()	
 
 func darahCounter():
@@ -36,6 +37,7 @@ func IkutMouse():
 
 func Tembak():
 	if Input.is_action_pressed("Nembak") && bisa_nembak:
+		Global.play_suara("Tembak")
 		emit_signal("instance_node", peluru, global_position)
 		bisa_nembak = false
 		attack_speed.start()
@@ -43,6 +45,7 @@ func Tembak():
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Musuh"):
 		darahCounter()
+		Global.play_suara("Tertabrak")
 		emit_signal("instance_node", musuhPartikelMati, global_position)
 		area.get_parent().queue_free()
 	

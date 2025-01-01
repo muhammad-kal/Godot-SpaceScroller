@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c7yx73bvttgsw"
-path="res://.godot/imported/shoot.wav-d580af4653f8e0cdc13f0a2d9d49bebe.sample"
+path="res://.godot/imported/shoot.wav-57f74d0e45ba95643afd0f397ecfc1c8.sample"
 
 [deps]
 
-source_file="res://Asset/Space Sidescroller Assets/Sounds/shoot.wav"
-dest_files=["res://.godot/imported/shoot.wav-d580af4653f8e0cdc13f0a2d9d49bebe.sample"]
+source_file="res://SFX/shoot.wav"
+dest_files=["res://.godot/imported/shoot.wav-57f74d0e45ba95643afd0f397ecfc1c8.sample"]
 
 [params]
 
