@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1ygdmsvx2gpv"]
+[gd_scene load_steps=3 format=3 uid="uid://ybcdcdwt2634"]
 
-[ext_resource type="Script" path="res://Musuh/DeletePartikel.gd" id="1_q0lkk"]
+[ext_resource type="Script" path="res://Player/player_mati_partikel.gd" id="1_dhg47"]
 
 [sub_resource type="Curve" id="Curve_3nl2o"]
 max_value = 1.5
@@ -14,6 +14,7 @@ speed_scale = 1.4
 explosiveness = 1.0
 emission_shape = 1
 emission_sphere_radius = 1.0
+direction = Vector2(-1, 0)
 spread = 70.0
 gravity = Vector2(0, 0)
 initial_velocity_min = 10.0
@@ -24,7 +25,8 @@ angle_min = -1.4
 angle_max = 134.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_3nl2o")
-script = ExtResource("1_q0lkk")
+color = Color(1, 0.254902, 0, 1)
+script = ExtResource("1_dhg47")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0

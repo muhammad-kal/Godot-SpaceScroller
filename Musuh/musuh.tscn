@@ -11,7 +11,7 @@ texture = ExtResource("1_tkbk5")
 flip_h = true
 script = ExtResource("2_x6l84")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Musuh"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_efm8c")

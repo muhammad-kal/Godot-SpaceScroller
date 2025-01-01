@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcc46byhm3f0e"]
+
+[ext_resource type="PackedScene" uid="uid://bbhuoa8khoab5" path="res://Player/player.tscn" id="1_d7816"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_mt6bg"]
+[ext_resource type="PackedScene" uid="uid://bnfib3tsvoeth" path="res://Musuh/musuh_spawner.tscn" id="3_bhqmv"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mt6bg")
+
+[node name="Player" parent="." instance=ExtResource("1_d7816")]
+position = Vector2(11, 44)
+
+[node name="Musuh_spawner" parent="." instance=ExtResource("3_bhqmv")]
+position = Vector2(179, 0)
+
+[connection signal="instance_node" from="Player" to="." method="instance_node"]
+[connection signal="instance_node" from="Musuh_spawner" to="." method="instance_node"]

@@ -6,12 +6,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obvox"]
 size = Vector2(8, 6)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="Sprite2D"]
 z_index = 5
+texture = ExtResource("1_pyh31")
 script = ExtResource("1_xvrxk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_pyh31")
+[node name="Hitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_obvox")
+
+[node name="AttackSpeed" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="AttackSpeed" to="." method="_on_attack_speed_timeout"]
