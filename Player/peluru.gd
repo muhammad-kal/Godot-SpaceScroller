@@ -1,6 +1,7 @@
 extends Sprite2D
 
 @export var kecepatan = 100
+@export var damage = 1
 
 func _process(delta: float) -> void:
 	global_position.x += 100 * delta

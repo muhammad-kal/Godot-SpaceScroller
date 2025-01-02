@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ijv31v1klpw"
-path="res://.godot/imported/Enemy3.png-20e20f4609a60a75fa078d8cc97e95cc.ctex"
+uid="uid://b57h5c6amp2ct"
+path="res://.godot/imported/Enemy2.png-5d4f5c6907b1d89107b667a840b8fdb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Space Sidescroller Assets/Enemy3.png"
-dest_files=["res://.godot/imported/Enemy3.png-20e20f4609a60a75fa078d8cc97e95cc.ctex"]
+source_file="res://Musuh/Musuh_2/Enemy2.png"
+dest_files=["res://.godot/imported/Enemy2.png-5d4f5c6907b1d89107b667a840b8fdb6.ctex"]
 
 [params]
 

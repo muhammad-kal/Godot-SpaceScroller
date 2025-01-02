@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://05fo8cxh5knl"]
+
+[ext_resource type="PackedScene" uid="uid://b372musumigun" path="res://Musuh/musuh.tscn" id="1_gqx78"]
+[ext_resource type="Texture2D" uid="uid://c7ijv31v1klpw" path="res://Musuh/Musuh_3/Enemy3.png" id="2_0igx0"]
+
+[node name="Musuh_3" instance=ExtResource("1_gqx78")]
+texture = ExtResource("2_0igx0")
+KECEPATAN = 60
+skor_point = 15
+darah_musuh = 2

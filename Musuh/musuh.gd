@@ -1,6 +1,8 @@
 extends Sprite2D
 
-const  KECEPATAN =  40
+@export var  KECEPATAN : int =  40
+@export var skor_point : int = 5
+@export var darah_musuh : int = 1
 
 var objPartikelMati = preload("res://Musuh/musuh_mati_partikel.tscn")
 signal instance_node(objek, posisi)
@@ -12,13 +14,20 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	global_position.x -= KECEPATAN * delta
 	jarakTempuh()
+	Mati()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("damage_ke_musuh"):
+		darah_musuh -= area.get_parent().damage
+		Global.play_suara("Tertabrak")
+		area.get_parent().queue_free()
+		
+
+func Mati():
+	if darah_musuh <= 0:
 		Global.play_suara("Meledak")
 		emit_signal("instance_node", objPartikelMati, global_position)
-		Global.skor += 1
-		area.get_parent().queue_free()
+		Global.skor += skor_point
 		queue_free()
 
 func jarakTempuh():

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efm8c"]
 size = Vector2(10, 8)
 
-[node name="Musuh" type="Sprite2D"]
+[node name="Musuh_1" type="Sprite2D"]
 texture = ExtResource("1_tkbk5")
 flip_h = true
 script = ExtResource("2_x6l84")

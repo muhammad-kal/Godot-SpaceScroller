@@ -1,11 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcc46byhm3f0e"]
+[gd_scene load_steps=18 format=3 uid="uid://dcc46byhm3f0e"]
 
 [ext_resource type="PackedScene" uid="uid://bbhuoa8khoab5" path="res://Player/player.tscn" id="1_d7816"]
 [ext_resource type="Script" path="res://Main/main.gd" id="1_mt6bg"]
 [ext_resource type="PackedScene" uid="uid://bnfib3tsvoeth" path="res://Musuh/musuh_spawner.tscn" id="3_bhqmv"]
 [ext_resource type="Texture2D" uid="uid://ceex7sklbcpjw" path="res://UI/player_health.png" id="4_dlv6h"]
+[ext_resource type="PackedScene" uid="uid://b372musumigun" path="res://Musuh/musuh.tscn" id="4_fyklk"]
 [ext_resource type="Script" path="res://UI/ui_darah.gd" id="5_b3inx"]
+[ext_resource type="PackedScene" uid="uid://ddoew6dfvfaex" path="res://Musuh/Musuh_2/musuh_2.tscn" id="5_todf5"]
 [ext_resource type="FontVariation" uid="uid://ljf17wkeqvv7" path="res://UI/Font/Font.tres" id="6_cqx2c"]
+[ext_resource type="PackedScene" uid="uid://05fo8cxh5knl" path="res://Musuh/Musuh_3/musuh_3.tscn" id="6_jds3m"]
 [ext_resource type="Script" path="res://SFX/sound_manager.gd" id="6_oblsu"]
 [ext_resource type="Script" path="res://Main/Skor.gd" id="7_axwwl"]
 [ext_resource type="AudioStream" uid="uid://c7yx73bvttgsw" path="res://SFX/shoot.wav" id="7_t48ha"]
@@ -23,6 +26,10 @@ position = Vector2(11, 44)
 
 [node name="Musuh_spawner" parent="." instance=ExtResource("3_bhqmv")]
 position = Vector2(179, 0)
+banyak_musuh = 3
+musuh_1 = ExtResource("4_fyklk")
+musuh_2 = ExtResource("5_todf5")
+musuh_3 = ExtResource("6_jds3m")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
