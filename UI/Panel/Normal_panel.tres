@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://6n5f0kj1xlxe"]
+
+[ext_resource type="Texture2D" uid="uid://dbqpxbboed1dt" path="res://UI/Panel/Panel_hover.png" id="1_xkcfl"]
+
+[resource]
+texture = ExtResource("1_xkcfl")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0

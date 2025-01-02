@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://8cpgjvp8yrsd"]
+
+[ext_resource type="FontVariation" uid="uid://ljf17wkeqvv7" path="res://UI/Font/Font.tres" id="1_5m2tk"]
+[ext_resource type="Theme" uid="uid://c3xpth1qen66i" path="res://UI/Panel/Panel.tres" id="2_fs7li"]
+[ext_resource type="Script" path="res://UI/MainMenu/mulai.gd" id="2_golt0"]
+
+[node name="Main_menu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 90.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Judul" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_5m2tk")
+text = "SpaceScroller"
+
+[node name="Judul2" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -10.0
+offset_right = 95.0
+offset_bottom = 13.0
+grow_vertical = 0
+scale = Vector2(0.42, 0.42)
+theme_override_fonts/font = ExtResource("1_5m2tk")
+text = "Oleh : Saya"
+
+[node name="Mulai" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -10.0
+offset_right = 22.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_fs7li")
+theme_override_fonts/font = ExtResource("1_5m2tk")
+text = "Mulai"
+script = ExtResource("2_golt0")
+
+[connection signal="pressed" from="Control/Mulai" to="Control/Mulai" method="_on_pressed"]
